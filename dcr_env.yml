@@ -1,0 +1,19 @@
+name: dcr
+dependencies:
+  - python
+  - pip
+  - astropy
+  - cloudpickle
+  - ipykernel
+  - joblib
+  - matplotlib
+  - numpy
+  - pytest
+  - scikit-image
+  - scipy
+  - setuptools
+  - tensorboard
+  - tqdm
+  - conda-forge::astroscrappy
+  - pip:
+    - git+https://github.com/profjsb/deepCR.git#egg=deepCR
