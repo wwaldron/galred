@@ -1,0 +1,16 @@
+name: astroba
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - astropy
+  - ipykernel
+  - numba
+  - numpy
+  - scikit-image
+  - scipy
+  - tqdm
+  - conda-forge::regions
+  - pip:
+    - llc
