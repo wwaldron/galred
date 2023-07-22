@@ -41,7 +41,7 @@ dashTitle = '-'.join(galTitle.split())
 for fn in iglob('**/*.ipynb', recursive=True):
 
     # Open File for Writing
-    with open(fn) as fid:
+    with open(fn, 'r+') as fid:
 
         # Get Lines
         fileText = fid.read()
@@ -50,3 +50,8 @@ for fn in iglob('**/*.ipynb', recursive=True):
         fileText = fileText.replace('[GALAXY_TITLE]', galTitle)
         fileText = fileText.replace('[GALAXY_SHORT_TITLE]', shrtTitle)
         fileText = fileText.replace('[GALAXY_DASH_TITLE]', dashTitle)
+
+        # Rewrite the File
+        fid.seek(0)
+        fid.write(fileText)
+        fid.truncate()
