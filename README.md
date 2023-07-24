@@ -80,7 +80,7 @@ export uref="${CRDS_PATH}/references/hst/uref/"
 
 Each of the notebooks in this repository have a number of variables that will be programmatically
 replaced using the [configuration script](configure.py). Failing to run this script before utilizing
-the wrokflow below will likely break the workflow.
+the workflow below will likely break the workflow.
 
 To see a list of parameters that can be changed, you can display the help text by running the
 following command in the top-level directory.
