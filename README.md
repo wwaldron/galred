@@ -76,6 +76,30 @@ export nref="${CRDS_PATH}/references/hst/nref/"
 export uref="${CRDS_PATH}/references/hst/uref/"
 ```
 
+### Configure Notebooks
+
+Each of the notebooks in this repository have a number of variables that will be programmatically
+replaced using the [configuration script](configure.py). Failing to run this script before utilizing
+the wrokflow below will likely break the workflow.
+
+To see a list of parameters that can be changed, you can display the help text by running the
+following command in the top-level directory.
+
+```bash
+$ ./configure -h
+```
+
+As an example, if I wanted to setup this template to process data on
+[ESO 137-001](https://en.wikipedia.org/wiki/ESO_137-001), I could run the following in the top-level
+directory.
+
+```bash
+$ ./configure "ESO 137-001" -a "Will Waldron" -i "Harding University"
+```
+
+Please note the use of quotation marks in the previous command as is necessary if there is
+whitespace you want preserved.
+
 ### Workflow Steps
 
 Now, you may work through the following files remembering that some parameters may need to be
