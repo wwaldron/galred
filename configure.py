@@ -25,6 +25,14 @@ prsr.add_argument(
     'title', type=str,
     help='Galaxy title to utilize'
 )
+prsr.add_argument(
+    '-a', '--author', type=str, default="",
+    help='The name of the preparer'
+)
+prsr.add_argument(
+    '-i', '--institution', metavar='INST', type=str, default="",
+    help="The name of the preparer's institution"
+)
 
 # Get the Arguments
 args = prsr.parse_args()
@@ -50,6 +58,8 @@ for fn in iglob('**/*.ipynb', recursive=True):
         fileText = fileText.replace('[GALAXY_TITLE]', galTitle)
         fileText = fileText.replace('[GALAXY_SHORT_TITLE]', shrtTitle)
         fileText = fileText.replace('[GALAXY_STAR_TITLE]', starTitle)
+        fileText = fileText.replace('[AUTHOR]', args.author)
+        fileText = fileText.replace('[INSTITUTION]', args.institution)
 
         # Rewrite the File
         fid.seek(0)
