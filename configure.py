@@ -22,7 +22,7 @@ prsr = ArgumentParser(
 
 # Add Arguments
 prsr.add_argument(
-    'title', type=str,
+    'gal_title', type=str,
     help='Galaxy title to utilize'
 )
 prsr.add_argument(
@@ -40,7 +40,7 @@ args = prsr.parse_args()
 
 # --- Replace Strings --- #
 # Prepare the Title
-galTitle  = args.title.strip().upper()
+galTitle  = args.gal_title.strip().upper()
 galTitle  = ' '.join(galTitle.split())
 shrtTitle = ''.join(galTitle.split())
 starTitle = '*'.join(galTitle.split()) + '*'
