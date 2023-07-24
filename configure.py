@@ -55,9 +55,9 @@ for fn in iglob('**/*.ipynb', recursive=True):
         fileText = fid.read()
 
         # Replace Text
-        fileText = fileText.replace('[GALAXY_TITLE]', galTitle)
-        fileText = fileText.replace('[GALAXY_SHORT_TITLE]', shrtTitle)
-        fileText = fileText.replace('[GALAXY_STAR_TITLE]', starTitle)
+        fileText = fileText.replace('[GALAXY]', galTitle)
+        fileText = fileText.replace('[GALAXY_SHORT]', shrtTitle)
+        fileText = fileText.replace('[GALAXY_WILDCARD]', starTitle)
         fileText = fileText.replace('[AUTHOR]', args.author)
         fileText = fileText.replace('[INSTITUTION]', args.institution)
 
