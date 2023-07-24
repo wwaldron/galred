@@ -35,7 +35,7 @@ args = prsr.parse_args()
 galTitle  = args.title.strip().upper()
 galTitle  = ' '.join(galTitle.split())
 shrtTitle = ''.join(galTitle.split())
-dashTitle = '-'.join(galTitle.split())
+starTitle = '*'.join(galTitle.split()) + '*'
 
 # Loop through Notebooks
 for fn in iglob('**/*.ipynb', recursive=True):
@@ -49,7 +49,7 @@ for fn in iglob('**/*.ipynb', recursive=True):
         # Replace Text
         fileText = fileText.replace('[GALAXY_TITLE]', galTitle)
         fileText = fileText.replace('[GALAXY_SHORT_TITLE]', shrtTitle)
-        fileText = fileText.replace('[GALAXY_DASH_TITLE]', dashTitle)
+        fileText = fileText.replace('[GALAXY_STAR_TITLE]', starTitle)
 
         # Rewrite the File
         fid.seek(0)
