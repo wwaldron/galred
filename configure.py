@@ -22,8 +22,16 @@ prsr = ArgumentParser(
 
 # Add Arguments
 prsr.add_argument(
-    'title', type=str,
+    'gal_title', type=str,
     help='Galaxy title to utilize'
+)
+prsr.add_argument(
+    '-a', '--author', type=str, default="",
+    help='The name of the preparer'
+)
+prsr.add_argument(
+    '-i', '--institution', metavar='INST', type=str, default="",
+    help="The name of the preparer's institution"
 )
 
 # Get the Arguments
@@ -32,10 +40,10 @@ args = prsr.parse_args()
 
 # --- Replace Strings --- #
 # Prepare the Title
-galTitle  = args.title.strip().upper()
+galTitle  = args.gal_title.strip().upper()
 galTitle  = ' '.join(galTitle.split())
 shrtTitle = ''.join(galTitle.split())
-dashTitle = '-'.join(galTitle.split())
+starTitle = '*'.join(galTitle.split()) + '*'
 
 # Loop through Notebooks
 for fn in iglob('**/*.ipynb', recursive=True):
@@ -47,9 +55,11 @@ for fn in iglob('**/*.ipynb', recursive=True):
         fileText = fid.read()
 
         # Replace Text
-        fileText = fileText.replace('[GALAXY_TITLE]', galTitle)
-        fileText = fileText.replace('[GALAXY_SHORT_TITLE]', shrtTitle)
-        fileText = fileText.replace('[GALAXY_DASH_TITLE]', dashTitle)
+        fileText = fileText.replace('[GALAXY]', galTitle)
+        fileText = fileText.replace('[GALAXY_SHORT]', shrtTitle)
+        fileText = fileText.replace('[GALAXY_WILDCARD]', starTitle)
+        fileText = fileText.replace('[AUTHOR]', args.author)
+        fileText = fileText.replace('[INSTITUTION]', args.institution)
 
         # Rewrite the File
         fid.seek(0)
