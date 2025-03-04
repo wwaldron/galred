@@ -94,7 +94,7 @@ As an example, if I wanted to setup this template to process data on
 directory.
 
 ```bash
-$ ./configure "ESO 137-001" -a "Will Waldron" -i "Harding University"
+$ ./configure "ESO 137-001" -a "Will Waldron" -i "UAH"
 ```
 
 Please note the use of quotation marks in the previous command as is necessary if there is
