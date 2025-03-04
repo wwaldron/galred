@@ -1,14 +1,24 @@
 name: dcr
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
 dependencies:
   - python
   - pip
   - astropy
   - cloudpickle
+  - cudatoolkit
   - ipykernel
   - joblib
   - matplotlib
+  - mkl=2023
   - numpy
   - pytest
+  - pytorch::pytorch==2.0.1
+  - pytorch::torchvision==0.15.2
+  - pytorch::torchaudio==2.0.2
+  - pytorch::pytorch-cuda=11.8
   - scikit-image
   - scipy
   - setuptools
