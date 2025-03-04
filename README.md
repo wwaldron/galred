@@ -102,8 +102,10 @@ whitespace you want preserved.
 
 ### Workflow Steps
 
-Now, you may work through the following files remembering that some parameters may need to be
-updated.
+Now, you may work through the following files using their hyperlinks or by
+navigating to the [Notebooks](Notebooks) directory (which just contains a list
+of symlinks to the files listed below). Remember that some
+parameters may need to be updated.
 
 1. [Image Downloader](Images/ImageDownloader.ipynb)
 1. [NED Downloader](Data/NED/NED_InfoDownloader.ipynb)
