@@ -113,5 +113,5 @@ parameters may need to be updated.
 1. [CRDS Updater](Images/update_crds.sh)
 1. [Cosmic Ray (CR) Remover](Images/DeepCR-Remover.ipynb)
 1. [Image Reducer](Images/ImageReducer.ipynb)
-1. [NaN Pixel Inpainter](Images/ProcessedImages/HST/PythonNotebooks/DrizzledInpainter.ipynb)
+1. [NaN Pixel Inpainter](Images/ProcessedImages/HST/PythonNotebooks/DrizzledInpainter.ipynb) (May be skipped if no `NaN` regions in FOVs)
 1. [Photometry Checker](Images/ProcessedImages/HST/PythonNotebooks/PhotometryChecker.ipynb)
